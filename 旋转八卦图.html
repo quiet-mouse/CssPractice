@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>旋转八卦</title>
+	<style type="text/css">
+		#container{
+			height: 204px;
+			width: 200px;
+			border-radius: 200px;
+			box-shadow: 0 0 4px #666666;
+			margin: 100px auto;
+			background: linear-gradient(90deg, black 50%, white 50%);
+		}
+		#top,#bottom{
+			height: 100px;
+			width: 100px;
+			margin: 0 auto;
+			border-radius: 100px
+		}
+		#top{
+			border: 1px solid white;
+		}
+		#bottom{
+			border: 1px solid black;
+		}
+		#inner1,#inner2{
+			height: 25px;
+			width: 25px;
+			margin: 25px auto;
+			border-radius: 50px; 
+		}
+		#inner1{
+			background: black
+		}
+        #inner2{
+        	background: white
+        }
+        #top{
+        	background: white
+        }
+        #bottom{
+        	background: black
+        }
+        #container{
+        	animation: bonce 5s infinite linear;
+        }
+        @keyframes bonce{
+        	0%{transform: rotate(0deg);}
+        	100%{transform: rotate(360deg);}
+        }
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="top">
+			<div id="inner1"></div>
+		</div>
+		<div id="bottom">
+			<div id="inner2"></div>
+		</div>
+	</div>
+</body>
+</html>
